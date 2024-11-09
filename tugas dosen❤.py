@@ -14,18 +14,18 @@ while True :
         jumlah_genap = 0
         while True :
             try:
-                angka = int (input("\nMasukkan angka / ketik 'exit' untuk keluar program : "))
+                angka = int (input("Masukkan angka / ketik 'exit' untuk keluar program : "))
                 if angka % 2 == 0:
+                    print(f"jumlah angka genap yg dimasukkan adalah : {jumlah_genap}")
                     jumlah_genap += 1
             except ValueError:
-                print(f"jumlah angka genap yg dimasukkan adalah : {jumlah_genap}")
                 print("Program Berhenti.")
                 break
         
     elif list_program == 'B':
         while True:
             kata=input ("\nMasukkan kata atau kalimat (ketik 'exit' untuk keluar) : ")
-            if kata.lower() == "exit":
+            if kata == "exit":
                 print("Program berhenti.")
                 break
             else:
@@ -42,7 +42,7 @@ while True :
                     prima = False
                     break
         if prima:
-            print(f"{n} aladah bilanagan prima.")
+            print(f"{n} adalah bilangan prima.")
         else:
             print(f"{n} bukan bilangan prima.")
         
@@ -50,6 +50,6 @@ while True :
         print("Data tidak valid")
             
     list_program = input("pilih program kembali (y/n) : ")
-    if list_program.lower()=='n':
+    if list_program =='n':
         print ("Program berhenti.")
         break
